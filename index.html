@@ -50,17 +50,6 @@
 			$().UItoTop({ easingType: 'easeOutQuart' });
 			});
 		</script>
-		<!--[if lt IE 8]>
-		<div style=' clear: both; text-align:center; position: relative;'>
-			<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-				<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
-			</a>
-		</div>
-		<![endif]-->
-		<!--[if lt IE 9]>
-		<script src="js/html5shiv.js"></script>
-		<link rel="stylesheet" media="screen" href="css/ie.css">
-		<![endif]-->
 	</head>
 	<body class="page1" id="top">
 <!--==============================header=================================-->
@@ -74,7 +63,7 @@
 								<li><a href="index-1.html">Tours</a></li>
 								<li><a href="index-2.html">Hot Deals</a></li>
 								<li><a href="index-3.html">Blog</a></li>
-								<li><a href="index-4.html">Payment</a></li>
+								<li><a href="index-4.html">About Us</a></li>
 							</ul>
 						</nav>
 						<div class="clear"></div>
@@ -98,7 +87,7 @@
 							FROM
 							<span>$2500</span>
 						</div>
-						<a href="#">LEARN MORE</a>
+						<a href="#" onClick="window.open('pdf/europe itinerary.pdf');">LEARN MORE</a>
 					</div>
 				</div>
 				<div data-src="images/slide1.jpg">
@@ -108,7 +97,7 @@
 							FROM
 							<span>$2000</span>
 						</div>
-						<a href="#">LEARN MORE</a>
+						<a href="#" onClick="window.open('pdf/europe itinerary.pdf');">LEARN MORE</a>
 					</div>
 				</div>
 				<div data-src="images/slide2.jpg">
@@ -118,7 +107,7 @@
 							FROM
 							<span>$1600</span>
 						</div>
-						<a href="#">LEARN MORE</a>
+						<a href="#" onClick="window.open('pdf/europe itinerary.pdf');">LEARN MORE</a>
 					</div>
 				</div>
 			</div>
@@ -132,7 +121,7 @@
 						<div class="label">
 							<div class="title">SPAIN</div>
 							<div class="price">FROM<span>$ 1500</span></div>
-							<a href="#">LEARN MORE</a>
+							<a href="#" onClick="window.open('pdf/europe itinerary.pdf');">LEARN MORE</a>
 						</div>
 					</div>
 				</div>
@@ -140,9 +129,9 @@
 					<div class="banner">
 						<img src="images/ban_img2.jpg" alt="">
 						<div class="label">
-							<div class="title">GOA</div>
-							<div class="price">FROM<span>$900</span></div>
-							<a href="#">LEARN MORE</a>
+							<div class="title">BALI</div>
+							<div class="price">FROM<span>$1500</span></div>
+							<a href="#" onClick="window.open('pdf/europe itinerary.pdf');">LEARN MORE</a>
 						</div>
 					</div>
 				</div>
@@ -152,12 +141,74 @@
 						<div class="label">
 							<div class="title">AUSTRALIA</div>
 							<div class="price">FROM<span>$ 3900</span></div>
-							<a href="#">LEARN MORE</a>
+							<a href="#" onClick="window.open('pdf/europe itinerary.pdf');">LEARN MORE</a>
 						</div>
 					</div>
 				</div>
 
-
+				<div class="grid_6">
+					<h3>CONTACT FOR BOOKING QUERIES</h3>
+					<form id="bookingForm">
+						<div class="fl1">
+							<div class="tmInput">
+								<input name="Name" placeHolder="Name:" type="text" data-constraints='@NotEmpty @Required @AlphaSpecial'>
+							</div>
+							<div class="tmInput">
+								<input name="Country" placeHolder="Your Country:" type="text" datYour a-constraints="@NotEmpty @Required">
+							</div>
+						</div>
+						<div class="fl1">
+							<div class="tmInput">
+								<input name="Email" placeHolder="Email:" type="text" data-constraints="@NotEmpty @Required @Email">
+							</div>
+							
+						</div>
+						<div class="clear"></div>
+						<strong>Check-in</strong>
+						<label class="tmDatepicker">
+							<input type="text" name="Check-in" placeHolder='10/05/2014' data-constraints="@NotEmpty @Required @Date">
+						</label>
+						<div class="clear"></div>
+						<strong>Check-out</strong>
+						<label class="tmDatepicker">
+							<input type="text" name="Check-out" placeHolder='20/05/2014' data-constraints="@NotEmpty @Required @Date">
+						</label>
+						<div class="clear"></div>
+						<div class="tmRadio">
+							<p>Comfort</p>
+							<input name="Comfort" type="radio" id="tmRadio0" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' checked/>
+							<span>Cheap</span>
+							<input name="Comfort" type="radio" id="tmRadio1" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
+							<span>Standart</span>
+							<input name="Comfort" type="radio" id="tmRadio2" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
+							<span>Lux</span>
+						</div>
+						<div class="clear"></div>
+						<div class="fl1 fl2">
+							<em>Adults</em>
+							<select name="Adults" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+								<option>1</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+							</select>
+							<div class="clear"></div>
+						<div class="fl1 fl2">
+							<em>Children</em>
+							<select name="Children" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+								<option>0</option>
+								<option>0</option>
+								<option>1</option>
+								<option>2</option>
+							</select>
+						</div>
+						<div class="clear"></div>
+						<div class="tmTextarea">
+							<textarea name="Message" placeHolder="Message" data-constraints='@NotEmpty @Required @Length(min=20,max=999999)'></textarea>
+						</div>
+						<a href="#" class="btn" data-type="submit">Submit</a>
+					</form>
+				</div>
 				
 				
 				<div class="grid_5 prefix_1">
@@ -194,9 +245,10 @@
 						<a href="www.plus.google.com" class="fa fa-google-plus"></a>
 					</div>
 					<div class="copy">
-						Mehta(c) 2017 | <a href="#">Privacy Policy</a> |Designed by ADM TOURS
+						Mehta(c) 2017 | Designed by ADM TOURS
 					</div>
 				</div>
+				<a href="profile.php">Log Out</a>
 			</div>
 		</footer>
 		<script>

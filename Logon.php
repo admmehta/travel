@@ -1,5 +1,4 @@
 <?php 
-/* Main page with two forms: sign up and log in */
 require 'db.php';
 session_start();
 ?>
@@ -11,7 +10,7 @@ session_start();
   <title>Sign-Up/Login Form</title>
   <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-     <link rel="stylesheet" href="css/style1.css">  
+  <link rel="stylesheet" href="css/style2.css">  
 
 </head>
 
@@ -50,22 +49,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
           <form action="Logon.php" method="POST"  autocomplete="off">
           
             <div class="field-wrap">
-            <label>
-              Email Address<span class="req">*</span>
-            </label>
-            <input type="email" required autocomplete="off" name="email"/>
+           <input type="email" required autocomplete="off" name="email" placeholder="Email Address*" />
           </div>
           
           <div class="field-wrap">
-            <label>
-              Password<span class="req">*</span>
-            </label>
-            <input type="password" required autocomplete="off" name="password"/>
+           <input type="password" required autocomplete="off" name="password" placeholder="Password*" />
           </div>
-          
-          <p class="forgot"><a href="reset_password.php">Forgot Password?</a></p>
-          
-          <button type="submit" class="button button-block" name="login"/>Log In</button>
+         <button type="submit" class="button button-block" name="login"/>Log In</button>
           
           </form>
 
@@ -78,32 +68,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
           
           <div class="top-row">
             <div class="field-wrap">
-              <label>
-                First Name<span class="req">*</span>
-              </label>
-              <input type="text" required autocomplete="off"  name="firstname"/>
+            <input type="text" required autocomplete="off"  name='firstname' placeholder="First Name*" />
             </div>
         
             <div class="field-wrap">
-              <label>
-                Last Name<span class="req">*</span>
-              </label>
-              <input type="text"required autocomplete="off" name="lastname"/>
+              <input type="text"required autocomplete="off" name='lastname' placeholder="Last Name*"/>
             </div>
           </div>
 
           <div class="field-wrap">
-            <label>
-              Email Address<span class="req">*</span>
-            </label>
-            <input type="email" required autocomplete="off" name="email"/>
+            <input type="email" required autocomplete="off" name='email' placeholder="Email Address*"/>
           </div>
           
           <div class="field-wrap">
-            <label>
-              Set A Password<span class="req">*</span>
-            </label>
-            <input type="password" required autocomplete="off" name="password"/>
+            <input type="password" required autocomplete="off" name='password' placeholder="Password*"/>
           </div>
           
           <button type="submit"  name="register" class="button button-block" />Get Started</button>

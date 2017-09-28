@@ -8,7 +8,7 @@ session_destroy();
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Logged OUt</title>
+  <title>Logged Out</title>
   <?php include 'css/css.html'; ?>
 </head>
 
